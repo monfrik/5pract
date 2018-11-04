@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5 практическая</title>
+</head>
+<body>
+    <script>
+        // Реализовать функцию, которая принимает строку и вырезает из неё все цифры, на их место вставляет буквенный аналог цифры (1: one и т. д.)
+        // И возвращает объект, где ключ - строка из чисел которые были вырезаны, а значение - изменённая строка.  
+
+        let numb = {
+            1: "one",
+            2: "two",
+            3: "three",
+            4: "four",
+            5: "five",
+            6: "six",
+            7: "seveb",
+            8: "eight",
+            9: "nine",
+            0: "zero"
+        }
+        let newStr='';
+        let obj = new Map;
+        function Fun(str){
+            console.log(str);
+            let arr= str.split('');
+            str='';
+            arr.forEach(function(item, i, arr) {
+                if ( item in numb ){
+                    newStr+=numb[item];
+                    str+=item;
+                } else {newStr+=arr[i]}
+            });
+            console.log(newStr);
+            obj.set(str, newStr);
+            return obj;
+        }
+        console.log(Fun("as12d1sf2"));
+    </script>
+</body>
+</html>
