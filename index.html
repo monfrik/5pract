@@ -24,8 +24,9 @@
             0: "zero"
         }
         let newStr='';
-        let obj = new Map;
         function Fun(str){
+            let obj = new Map;
+            newStr='';
             console.log(str);
             let arr= str.split('');
             str='';
@@ -39,7 +40,6 @@
             obj.set(str, newStr);
             return obj;
         }
-        console.log(Fun("as12d1sf2"));
     </script>
 </body>
 </html>
